@@ -13,14 +13,14 @@ script:
 
 after_success:
   # 이미지 생성
-  - docker build -t cl/docker-frontend ./frontend
-  - docker build -t cl/docker-backend ./backend
-  - docker build -t cl/docker-nginx   ./nginx
+  - docker build -t chaelynjang/docker-frontend ./frontend
+  - docker build -t chaelynjang/docker-backend ./backend
+  - docker build -t chaelynjang/docker-nginx   ./nginx
 
   # Docker Hub 로그인
   - echo "$DOCKER_HUB_PASSWORD" | docker login -u "$DOCKER_HUB_ID" --password-stdin
   
   # Docker Hub에 push
-  - docker push cl/docker-frontend
-  - docker push cl/docker-backend
-  - docker push cl/docker-nginx
+  - docker push chaelynjang/docker-frontend
+  - docker push chaelynjang/docker-backend
+  - docker push chaelynjang/docker-nginx
