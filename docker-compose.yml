@@ -23,6 +23,12 @@ services:
     volumes:
       - /app/node_modules
       - ./backend:/app
+    environment:
+      MYSQL_HOST: mysql
+      MYSQL_USER: root
+      MYSQL_ROOT_PASSWORD: cldockerfullstack
+      MYSQL_DATABASE: myapp
+      MYSQL_PORT: 3306
 
   # 운영환경에서는 AWS에서 제공하는 RDS를 이용할 것이므로 해당 코드 주석 처리
   # mysql:
