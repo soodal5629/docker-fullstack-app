@@ -17,7 +17,7 @@ services:
       - frontend
       - backend
   backend:
-    image: chaelynjang/doker-backend
+    image: chaelynjang/docker-backend
     container_name: app_backend
     volumes:
       - /app/node_modules
